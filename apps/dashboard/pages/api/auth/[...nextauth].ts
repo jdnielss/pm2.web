@@ -121,6 +121,11 @@ const providers = () => {
               { name: { $regex: new RegExp(credentials.name, "i") } },
             ],
           });
+
+          if (!credentials.email.endsWith(`@enigmacamp.com`)) {
+            throw new Error("System Exit(0)");
+          }
+
           const is1stAccount = (await userModel.countDocuments()) === 0;
           const settings = await fetchSettings();
           if (settings.registrationCode?.length && settings.registrationCode !== credentials.registrationCode)
