@@ -54,22 +54,6 @@ export default function ProcessAction({ processId, collapse }: ProcessActionProp
         <IconPower size="1.4rem" />
       </ActionIcon>
       <ActionIcon
-        variant="light"
-        color="red"
-        radius="sm"
-        size={"lg"}
-        loading={processAction.isPending && processAction.variables.action === "DELETE"}
-        onClick={() =>
-          processAction.mutate({
-            processId,
-            action: "DELETE",
-          })
-        }
-        disabled={processAction.isPending}
-      >
-        <IconTrash size="1.4rem" />
-      </ActionIcon>
-      <ActionIcon
         className={classes.colorSchemeLight}
         variant={"light"}
         color={"dark.2"}
