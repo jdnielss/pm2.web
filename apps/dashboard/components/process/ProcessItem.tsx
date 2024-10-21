@@ -43,6 +43,7 @@ export default function ProcessItem({ process, setting }: ProcessItemProps) {
         [classes.opened]: !collapsed,
         [classes.closed]: collapsed,
       })}
+      h={"100vh"}
     >
       <Flex direction={"column"}>
         <Flex align={"center"} justify={"space-between"} wrap={"wrap"}>
