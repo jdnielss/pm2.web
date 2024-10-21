@@ -17,8 +17,8 @@ export default function ProcessLog({ processId, refetchInterval }: ProcessAction
   );
 
   return (
-    <Paper radius="md" p="xs" className={classes.processLog} h={"80vh"} m="xs">
-      <ScrollArea h={"100%"} style={{ overflowX: "hidden" }}>
+    <Paper radius="md" p="xs" className={classes.processLog} h={"70vh"} m="xs">
+      <ScrollArea h={"70vh"} style={{ overflowX: "hidden" }}>
         <Text fw="bold">Logs</Text>
         <div>
           {getLogs?.data?.map((log) => (
